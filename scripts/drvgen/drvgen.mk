@@ -31,6 +31,6 @@ DRVGEN_TOOL := $(srctree)/tools/dct/DrvGen.py
 drvgen: $(DRVGEN_FILE_LIST)
 $(DRVGEN_OUT)/cust.dtsi: $(DRVGEN_TOOL) $(DWS_FILE)
 	@mkdir -p $(dir $@)
-	$(python) $(DRVGEN_TOOL) $(DWS_FILE) $(dir $@) $(dir $@) cust_dtsi
+	python2 $(DRVGEN_TOOL) $(DWS_FILE) $(dir $@) $(dir $@) cust_dtsi
 
-endif#MTK_PLATFORM
+endif #MTK_PLATFORM
